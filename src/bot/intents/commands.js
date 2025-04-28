@@ -1,37 +1,45 @@
-module.exports = [
+const commands = [
     {
-        name: 'saudacao',
-        keywords: ['oi', 'ola', 'olá', 'iae', 'eae'],
-        response: 'Fala FURIOSO(A)! 🎮 Se liga nas transmissões, a FURIA tá com tudo! 💥 Quer receber atualizações ao vivo? Responde com "Sim" ou "Não"! 🎮🔥'
+        action: 'greet',
+        keywords: ['oi', 'ola', 'olá', 'iae', 'eae', 'opa', 'salve']
     },
     {
-        name: 'confirmarSim',
-        keywords: ['sim'],
-        response: 'Valeu! Agora você vai receber atualizações sempre que a FURIA estiver ao vivo! 🔥'
+        action: 'help',
+        keywords: ['ajuda', 'help', 'comandos', 'menu']
     },
     {
-        name: 'confirmarNao',
-        keywords: ['não'],
-        response: 'Ok, você não vai receber mais notificações. Fica à vontade para chamar quando quiser saber de algo! 😉'
+        action: 'about_furia',
+        keywords: [
+            'sobre o time',
+            'time da furia',
+            'jogadores',
+            'quem joga',
+            'equipe furia',
+            'quem são'
+        ]
     },
     {
-        name: 'ajuda',
-        keywords: ['ajuda'],
-        action: 'helpMessage'
+        action: 'check_stream',
+        keywords: [
+            'stream',
+            'ao vivo',
+            'live',
+            'qual stream',
+            'quem está ao vivo',
+            'assistir ao vivo'
+        ]
     },
     {
-        name: 'sobreTime',
-        keywords: ['time', 'furia'],
-        action: 'aboutFuria'
-    },
-    {
-        name: 'statusStream',
-        keywords: ['stream', 'ao vivo'],
-        action: 'checkStreamStatus'
-    },
-    {
-        name: 'assistir',
-        keywords: ['assistir', 'onde assistir', 'aonde assistir', 'quero assistir'],
-        response: '🎮 Você pode assistir ao vivo na nossa transmissão oficial na Twitch: [FURIA TV](https://www.twitch.tv/furiatv)'
+        action: 'watch_stream',
+        keywords: [
+            'assistir',
+            'onde assistir',
+            'ver ao vivo',
+            'ver live',
+            'aonde posso assistir',
+            'quero assistir'
+        ]
     }
 ];
+
+module.exports = commands;
